@@ -6,7 +6,7 @@
 -Skander Ben Salah 
 -Nizar Chaieb
 
-(Replacez les noms et responsabilités ci-dessus selon la composition réelle de votre équipe.)
+
 
 ---
 
