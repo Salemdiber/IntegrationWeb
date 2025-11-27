@@ -140,6 +140,9 @@
   border-bottom-style: var(--tw-border-style);
   border-bottom-width: 1px;
 }
+.border-\[\#E5E7EB\] {
+  border-color: #E5E7EB;
+}
 .bg-\[\#1D1D1B\] {
   background-color: #1D1D1B;
 }
