@@ -6,30 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Universitaire - Header</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide n'expose pas de CSS global via /dist/lucide.min.css; on utilise le script UMD plus bas -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* Hero title: couleur principale et deux ombres portées */
-    .hero-title {
-      color: #C90C0F;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.22), 0 10px 30px rgba(0, 0, 0, 0.10);
-    }
-
-    /* Cards: légère bordure stroke et double drop shadow */
-    .card {
-      border: 1px solid #E5E7EB;
-      box-shadow: 0 6px 12px rgba(14, 20, 30, 0.06), 0 20px 40px rgba(14, 20, 30, 0.04);
-      border-radius: 8px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#FFFFFF]">
+<body class="bg-white" style="font-family: 'Inter', sans-serif;">
 
   <!-- Header Navigation -->
   <header class="bg-white shadow-lg sticky top-0 z-50">
@@ -61,6 +41,11 @@
           </a>
         </nav>
 
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-[#1D1D1B] hover:text-[#C90C0F] p-2" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
 
 
         <!-- CTA Buttons -->
@@ -77,22 +62,34 @@
     </div>
   </header>
 
+  <!-- Mobile menu (hidden on desktop) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="#" class="text-[#1D1D1B] font-medium">Accueil</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+        <a href="#" class="text-[#C90C0F] font-medium">Menus</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">À propos</a>
+      </nav>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section class="hero bg-transparent">
-    <div class="max-w-7xl mx-auto px-6 text-left py-12 md:py-20">
-      <h2 class="hero-title text-xl md:text-xl font-extrabold tracking-tight text-left">Menus</h2>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-left py-12 md:py-20">
+      <h2 class="text-[#C90C0F] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-left drop-shadow-lg">Menus</h2>
     </div>
   </section>
   <!-- Cards container: Réservation plat & Composer plat -->
   <section class="py-10">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- Card 1: Réservation plat (image on top) -->
         <article
-          class="bg-white rounded-[8px] overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 shadow-[4px_4px_10px_rgba(0,0,0,0.15),-4px_-4px_10px_rgba(0,0,0,0.05)]">
-          <img src="/reserver.jpg" alt="Plat pour réservation" class="w-full h-48 object-cover rounded-t-[8px]">
-          <div class="p-6">
+          class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+          <img src="/reserver.jpg" alt="Plat pour réservation" class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+          <div class="p-4 sm:p-6">
             <h3 class="text-xl font-semibold text-[#C90C0F]">Réservation plat</h3>
             <p class="mt-2 text-sm text-slate-700">Réservez rapidement un plat du jour ou composez votre plat sur
               mesure.</p>
@@ -108,9 +105,9 @@
 
         <!-- Card 2: Composer plat (image on top) -->
         <article
-          class="bg-white rounded-[8px] overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 shadow-[4px_4px_10px_rgba(0,0,0,0.15),-4px_-4px_10px_rgba(0,0,0,0.05)]">
-          <img src="/composer.jpg" alt="Plat pour composer" class="w-full h-48 object-cover rounded-t-[8px]">
-          <div class="p-6">
+          class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+          <img src="/composer.jpg" alt="Plat pour composer" class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+          <div class="p-4 sm:p-6">
             <h3 class="text-xl font-semibold text-[#C90C0F]">Composer plat</h3>
             <p class="mt-2 text-sm text-slate-700">Composez votre plat sur mesure. À votre goût !</p>
             <div class="mt-4">
@@ -129,16 +126,16 @@
   </section>
   <!-- Informations Section -->
   <section class="py-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <h3 class="hero-title text-xl md:text-xl font-extrabold tracking-tight text-left">Informations</h3>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <h3 class="text-[#C90C0F] text-2xl md:text-3xl font-extrabold text-left">Informations</h3>
     </div>
   </section>
   <!-- Cards container: Horaires & Menus du jour -->
   <section class="py-6">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <article class="card bg-white rounded-[8px] overflow-hidden shadow-md">
+        <article class="bg-white rounded-lg overflow-hidden border border-[#E5E7EB] shadow-lg">
           <!-- Bande header -->
           <div class="bg-[#1D1D1B] p-3 flex items-center">
             <i data-lucide="clock" class="w-5 h-5 text-white mr-2"></i>
@@ -166,9 +163,9 @@
           </div>
         </article>
 
-        <article class="card bg-white rounded-[8px] overflow-hidden shadow-md">
+        <article class="bg-white rounded-lg overflow-hidden border border-[#E5E7EB] shadow-lg">
           <!-- Bande header -->
-          <div class="bg-[#1D1D1B] p-3 flex items-center rounded-t-[8px]">
+          <div class="bg-[#1D1D1B] p-3 flex items-center rounded-t-lg">
             <i data-lucide="menu" class="w-5 h-5 text-white mr-2"></i>
             <h4 class="text-white text-xl font-semibold mb-0">Menus du jour</h4>
           </div>
@@ -176,17 +173,17 @@
           <!-- Contenu avec bandes séparées -->
           <div class="p-4 flex flex-col space-y-3">
             <!-- Bande 1 -->
-            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-[8px]">
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
               <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
               <span class="font-bold text-white">Pattes Bolognaise</span>
             </div>
             <!-- Bande 2 -->
-            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-[8px]">
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
               <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
               <span class="font-bold text-white">Ojja Merguez</span>
             </div>
             <!-- Bande 3 -->
-            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-[8px]">
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
               <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
               <span class="font-bold text-white">Couscous</span>
             </div>
@@ -203,6 +200,16 @@
     document.addEventListener('DOMContentLoaded', function () {
       if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
+      }
+      // Mobile menu toggle
+      var mobileBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          var expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', String(!expanded));
+          mobileMenu.classList.toggle('hidden');
+        });
       }
     });
   </script>
