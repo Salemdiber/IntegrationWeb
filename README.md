@@ -1,9 +1,10 @@
 # Resto Universitaire — README
 
 ## Équipe
-
-
-
+- Salem Diber
+- Adem Miladi 
+- Skander Ben Salah 
+- Nizar Chaieb
 ## Exécution du projet (rapide)
 1) Cloner le projet
 
