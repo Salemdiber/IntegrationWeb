@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Universitaire - Header</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white" style="font-family: 'Inter', sans-serif;">
+
+  <!-- Header Navigation -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <a href="/" class="flex items-center space-x-3" aria-label="Accueil - Resto Universitaire Esprit">
+            <img src="/logorestoflow.svg" alt="Logo Resto Universitaire"
+              class="w-12 h-12 md:w-14 md:h-14 object-contain">
+            <h1 class="text-lg md:text-xl font-bold text-[#C90C0F] leading-none">Resto Universitaire Esprit</h1>
+          </a>
+        </div>
+
+        <!-- Navigation Desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Accueil
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Réservations
+          </a>
+          <a href="#" class="text-[#C90C0F] font-medium flex items-center">
+            Menus
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            À propos
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-[#1D1D1B] hover:text-[#C90C0F] p-2"
+          aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button
+            class="px-8 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-red-700 transition-all duration-300 flex items-center cursor-pointer">
+            <i data-lucide="log-out" class="mr-2"></i>
+            LogOut
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (hidden on desktop) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="#" class="text-[#1D1D1B] font-medium">Accueil</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+        <a href="#" class="text-[#C90C0F] font-medium">Menus</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">À propos</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-left py-12 md:py-20">
+      <h2
+        class="text-[#C90C0F] text-3xl sm:text-2xl md:text-5xl lg:text-3xl font-extrabold tracking-tight text-left drop-shadow-lg">
+        Menus</h2>
+    </div>
+  </section>
+  <!-- Container avec 3 drop shadow -->
+  <section class="py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div
+        class="bg-white rounded-lg border border-[#E5E7EB] p-6 md:p-8 shadow-[0_6px_12px_rgba(14,20,30,0.06),0_12px_24px_rgba(14,20,30,0.04),0_20px_40px_rgba(14,20,30,0.02)]">
+        <div class="mb-4">
+          <div class="flex items-center justify-between">
+            <a href="menus.html" class="inline-flex items-center text-sm text-[#1D1D1B] hover:text-[#C90C0F] font-medium">
+              <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+              Retour
+            </a>
+
+            <button aria-label="Filtrer les résultats" class="inline-flex items-center gap-2 px-4 py-2 bg-[#000000] text-white text-sm font-medium rounded-md hover:opacity-90 transition">
+              <i data-lucide="filter" class="w-4 h-4"></i>
+              Filtrer
+            </button>
+          </div>
+          <h2
+            class="text-[#C90C0F] text-3xl sm:text-2xl md:text-5xl lg:text-3xl font-extrabold tracking-tight text-left drop-shadow-lg mt-3">
+            Reserver votre Plat</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <article
+            class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+            <img src="/ojja.png" alt="Plat pour réservation"
+              class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-xl font-semibold text-[#C90C0F]">Ojja Merguez</h3>
+              <p class="mt-2 text-sm text-slate-700">Réservez rapidement un plat du jour ou composez votre plat sur
+                mesure.</p>
+              <div class="mt-4">
+                <a href="#"
+                  class="group inline-flex w-full items-center justify-center px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                  Réserver <i data-lucide="chevron-right"
+                    class="ml-3 w-5 h-5 transform transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+            <img src="/7out.jpeg" alt="Plat pour réservation"
+              class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-xl font-semibold text-[#C90C0F]">Poisson</h3>
+              <p class="mt-2 text-sm text-slate-700">Réservez rapidement un plat du jour ou composez votre plat sur
+                mesure.</p>
+              <div class="mt-4">
+                <a href="#"
+                  class="group inline-flex w-full items-center justify-center px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                  Réserver<i data-lucide="chevron-right"
+                    class="ml-3 w-5 h-5 transform transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+            <img src="/ma9rouna.jpeg" alt="Plat pour réservation"
+              class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-xl font-semibold text-[#C90C0F]">Pattes Bolognaise</h3>
+              <p class="mt-2 text-sm text-slate-700">Réservez rapidement un plat du jour ou composez votre plat sur
+                mesure.</p>
+              <div class="mt-4">
+                <a href="#"
+                  class="group inline-flex w-full items-center justify-center px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                  Réserver<i data-lucide="chevron-right"
+                    class="ml-3 w-5 h-5 transform transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <div class="md:col-span-3 flex justify-center">
+            <article class="bg-white rounded-lg overflow-hidden border border-[#E5E7EB] shadow-lg max-w-lg w-full">
+
+
+              <!-- Bande header -->
+              <div class="bg-[#1D1D1B] p-3 flex items-center">
+                <i data-lucide="info" class="w-5 h-5 text-white mr-2"></i>
+                <h4 class="text-white text-xl font-semibold mb-0">Informations Importantes</h4>
+              </div>
+
+              <!-- Contenu -->
+              <div class="p-6 space-y-4 bg-[#F2F2F2]">
+                <p class="text-slate-700 flex items-start">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-[#C90C0F] mr-3 flex-shrink-0"></i>
+                  <span>Présentez-vous au comptoir à l'heure indiquée</span>
+                </p>
+                <p class="text-slate-700 flex items-start">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-[#C90C0F] mr-3 flex-shrink-0"></i>
+                  <span>Votre réservation sera conservée 15 minutes</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+      // Mobile menu toggle
+      var mobileBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          var expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', String(!expanded));
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-[#1D1D1B] text-slate-100 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
+        <div class="flex-1">
+          <a href="/" class="flex items-center space-x-3 mb-3">
+            <img src="/logorestoflow.svg" alt="Logo" class="w-10 h-10 object-contain">
+            <span class="font-semibold text-white">Resto Universitaire Esprit</span>
+          </a>
+          <p class="text-sm text-slate-300">Votre restaurant universitaire moderne offre une
+            expérience culinaire de qualité dans un environnement
+            convivial et accueillant.</p>
+
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Navigation</h5>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li><a href="#" class="hover:text-white">Accueil</a></li>
+            <li><a href="#" class="hover:text-white">Menus</a></li>
+            <li><a href="#" class="hover:text-white">Réservations</a></li>
+            <li><a href="#" class="hover:text-white">À propos</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Suivez-nous</h5>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-slate-400">
+        © <span id="year"></span> Resto Universitaire Esprit — Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide icons (SVG) - CDN + init -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+      // current year for footer
+      var y = new Date().getFullYear();
+      var el = document.getElementById('year');
+      if (el) el.textContent = y;
+    });
+  </script>
+
+
+</body>
+
+</html>
