@@ -5,12 +5,6 @@
 
 
 ## Exécution du projet (rapide)
-
-
-
-
-## Exécution du projet (rapide)
-
 1) Cloner le projet
 
 ```bash
