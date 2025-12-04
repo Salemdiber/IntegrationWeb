@@ -1,182 +1,214 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Récapitulatif de votre Réservation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Récapitulatif de votre Réservation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body class="bg-white" style="font-family: 'Inter', sans-serif;">
-
-  <!-- ========================= HEADER ========================= -->
-  <header class="bg-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex items-center justify-between h-20">
-
-        <!-- Logo -->
-        <a href="/" class="flex items-center space-x-3">
-          <img src="assets/logorestoflow.svg" alt="Logo Resto Universitaire" class="w-12 h-12">
-          <h1 class="text-lg md:text-xl font-bold text-[#C90C0F]">Resto Universitaire Esprit</h1>
-        </a>
-
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="#" class="font-medium text-[#1D1D1B]">Accueil</a>
-          <a href="#" class="font-medium text-[#1D1D1B]">Réservations</a>
-          <a href="#" class="font-medium text-[#C90C0F]">Menus</a>
-          <a href="#" class="font-medium text-[#1D1D1B]">À propos</a>
-        </nav>
-
-        <!-- Logout Button -->
-        <button
-          class="hidden md:flex items-center px-8 py-3 bg-[#C90C0F] text-white font-semibold rounded-xl shadow hover:bg-red-700 transition">
-          <i data-lucide="log-out" class="mr-2"></i>
-          LogOut
-        </button>
-
-        <!-- Mobile menu toggle -->
-        <button id="mobile-menu-button" class="md:hidden p-2 text-[#1D1D1B]">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
-    <div class="px-6 py-4 flex flex-col space-y-2">
-      <a href="#" class="text-[#1D1D1B]">Accueil</a>
-      <a href="#" class="text-[#1D1D1B]">Réservations</a>
-      <a href="#" class="text-[#C90C0F]">Menus</a>
-      <a href="#" class="text-[#1D1D1B]">À propos</a>
-    </div>
-  </div>
-
-  <!-- ========================= MAIN CONTENT ========================= -->
-  <section class="flex justify-center py-16 px-6">
-    <div class="border rounded-2xl shadow-md max-w-4xl w-full p-10 bg-white">
-
-      <!-- Title -->
-      <h1 class="text-3xl font-bold text-center text-[#1D1D1B]">Récapitulatif de votre Réservation</h1>
-
-      <p class="text-center text-slate-600 mt-2 mb-10">
-        Remplissez le formulaire pour réserver en quelques clics
-      </p>
-
-      <!-- FORM CARD -->
-      <div class="max-w-lg mx-auto bg-white border rounded-xl shadow p-8">
-
-        <!-- Champ: créneau -->
-        <label class="text-sm font-medium">Saisir autre créneau</label>
-        <select class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50">
-          <option>12:30 – 12:45</option>
-          <option>12:45 – 13:00</option>
-          <option>13:00 – 13:15</option>
-        </select>
-
-        <!-- Nom & prénom -->
-        <label class="text-sm font-medium">Nom et prénom</label>
-        <input type="text" value="Ahmed Ben Ali"
-               class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50">
-
-        <!-- Matricule -->
-        <label class="text-sm font-medium">Matricule ESPRIT</label>
-        <input type="text" value="123AMT2029"
-               class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50">
-
-        <!-- Menu du jour -->
-        <label class="text-sm font-medium">Menu du jour</label>
-        <select class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50">
-          <option>Couscous Royal</option>
-          <option>Pâtes Bolognaise</option>
-          <option>Ojja Merguez</option>
-        </select>
-
-        <!-- Nombre de personnes -->
-        <label class="text-sm font-medium">Nombre de personnes</label>
-        <input type="number" value="1"
-               class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50">
-
-        <!-- Checkbox -->
-        <div class="flex items-center mt-3 mb-6">
-          <input type="checkbox" class="mr-2">
-          <span class="text-sm text-[#1D1D1B]">M’envoyer une notification 10 min avant</span>
-        </div>
-
-        <!-- BUTTONS -->
-        <div class="flex justify-between gap-4 mt-6">
-          <button
-            class="w-1/2 flex items-center justify-center gap-2 px-4 py-3 border border-[#C90C0F] text-[#C90C0F] rounded-xl hover:bg-[#C90C0F] hover:text-white transition">
-            <i data-lucide="list"></i> Voir autre créneau
-          </button>
-
-          <button
-            class="w-1/2 flex items-center justify-center gap-2 px-4 py-3 bg-[#C90C0F] text-white rounded-xl hover:bg-red-700 transition">
-            <i data-lucide="check-circle"></i> Confirmer
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================= FOOTER ========================= -->
-  <footer class="bg-[#1D1D1B] text-slate-100 mt-12">
-    <div class="max-w-7xl mx-auto px-6 py-10">
-
-      <div class="flex flex-col md:flex-row md:justify-between gap-6">
-
-        <div class="flex-1">
-          <a href="/" class="flex items-center space-x-3 mb-3">
-            <img src="assets/logorestoflow.svg" alt="Logo" class="w-10 h-10 object-contain">
-            <span class="font-semibold text-white">Resto Universitaire Esprit</span>
+  <body class="bg-white" style="font-family: 'Inter', sans-serif">
+    <!-- ========================= HEADER ========================= -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="/" class="flex items-center space-x-3">
+            <img
+              src="assets/logorestoflow.svg"
+              alt="Logo Resto Universitaire"
+              class="w-12 h-12"
+            />
+            <h1 class="text-lg md:text-xl font-bold text-[#C90C0F]">
+              Resto Universitaire Esprit
+            </h1>
           </a>
-          <p class="text-sm text-slate-300">
-            Votre restaurant universitaire moderne propose une expérience culinaire de qualité.
-          </p>
-        </div>
 
-        <div class="flex-1">
-          <h5 class="font-semibold mb-2">Navigation</h5>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li><a href="#" class="hover:text-white">Accueil</a></li>
-            <li><a href="#" class="hover:text-white">Menus</a></li>
-            <li><a href="#" class="hover:text-white">Réservations</a></li>
-            <li><a href="#" class="hover:text-white">À propos</a></li>
-          </ul>
-        </div>
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" class="font-medium text-[#1D1D1B]">Accueil</a>
+            <a href="HomePageRestoFlow.html" class="font-medium text-[#1D1D1B]">Réservations</a>
+            <a href="#" class="font-medium text-[#C90C0F]">Menus</a>
+            <a href="#" class="font-medium text-[#1D1D1B]">À propos</a>
+          </nav>
 
-        <div class="flex-1">
-          <h5 class="font-semibold mb-2">Suivez-nous</h5>
-          <div class="flex space-x-4">
-            <i data-lucide="facebook" class="w-5 h-5"></i>
-            <i data-lucide="instagram" class="w-5 h-5"></i>
-            <i data-lucide="twitter" class="w-5 h-5"></i>
+          <!-- Logout Button -->
+          <button
+            class="hidden md:flex items-center px-8 py-3 bg-[#C90C0F] text-white font-semibold rounded-xl shadow hover:bg-red-700 transition"
+          >
+            <i data-lucide="log-out" class="mr-2"></i>
+            LogOut
+          </button>
+
+          <!-- Mobile menu toggle -->
+          <button id="mobile-menu-button" class="md:hidden p-2 text-[#1D1D1B]">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-slate-200"
+    >
+      <div class="px-6 py-4 flex flex-col space-y-2">
+        <a href="#" class="text-[#1D1D1B]">Accueil</a>
+        <a href="HomePageRestoFlow.html" class="text-[#1D1D1B]">Réservations</a>
+        <a href="#" class="text-[#C90C0F]">Menus</a>
+        <a href="#" class="text-[#1D1D1B]">À propos</a>
+      </div>
+    </div>
+
+    <!-- ========================= MAIN CONTENT ========================= -->
+    <section class="flex justify-center py-16 px-6">
+      <div class="border rounded-2xl shadow-md max-w-4xl w-full p-10 bg-white">
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center text-[#1D1D1B]">
+          Récapitulatif de votre Réservation
+        </h1>
+
+        <p class="text-center text-slate-600 mt-2 mb-10">
+          Remplissez le formulaire pour réserver en quelques clics
+        </p>
+
+        <!-- FORM CARD -->
+        <div class="max-w-lg mx-auto bg-white border rounded-xl shadow p-8">
+          <!-- Champ: créneau -->
+          <label class="text-sm font-medium">Saisir autre créneau</label>
+          <select
+            class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50"
+          >
+            <option>12:30 – 12:45</option>
+            <option>12:45 – 13:00</option>
+            <option>13:00 – 13:15</option>
+          </select>
+
+          <!-- Nom & prénom -->
+          <label class="text-sm font-medium">Nom et prénom</label>
+          <input
+            type="text"
+            value="Ahmed Ben Ali"
+            class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50"
+          />
+
+          <!-- Matricule -->
+          <label class="text-sm font-medium">Matricule ESPRIT</label>
+          <input
+            type="text"
+            value="123AMT2029"
+            class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50"
+          />
+
+          <!-- Menu du jour -->
+          <label class="text-sm font-medium">Menu du jour</label>
+          <select
+            class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50"
+          >
+            <option>Couscous Royal</option>
+            <option>Pâtes Bolognaise</option>
+            <option>Ojja Merguez</option>
+          </select>
+
+          <!-- Nombre de personnes -->
+          <label class="text-sm font-medium">Nombre de personnes</label>
+          <input
+            type="number"
+            value="1"
+            class="w-full mt-1 mb-4 border rounded-lg px-3 py-2 text-sm bg-gray-50"
+          />
+
+          <!-- Checkbox -->
+          <div class="flex items-center mt-3 mb-6">
+            <input type="checkbox" class="mr-2" />
+            <span class="text-sm text-[#1D1D1B]"
+              >M’envoyer une notification 10 min avant</span
+            >
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="flex justify-between gap-4 mt-6">
+            <a href="HomePageRestoFlow.html"
+              class="w-1/2 flex items-center justify-center gap-2 px-4 py-3 border border-[#C90C0F] text-[#C90C0F] rounded-xl hover:bg-[#C90C0F] hover:text-white transition"
+            >
+              <i data-lucide="list"></i> Voir autre créneau
+          </a>
+            <a
+              href="ConfirmeReservation.html"
+              class="w-1/2 flex items-center justify-center gap-2 px-4 py-3 bg-[#C90C0F] text-white rounded-xl hover:bg-red-700 transition"
+            >
+              <i data-lucide="check-circle"></i> Confirmer
+            </a>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="border-t border-slate-700 mt-6 pt-4 text-center text-sm text-slate-400">
-        © <span id="year"></span> Resto Universitaire Esprit — Tous droits réservés
+    <!-- ========================= FOOTER ========================= -->
+    <footer class="bg-[#1D1D1B] text-slate-100 mt-12">
+      <div class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex flex-col md:flex-row md:justify-between gap-6">
+          <div class="flex-1">
+            <a href="/" class="flex items-center space-x-3 mb-3">
+              <img
+                src="assets/logorestoflow.svg"
+                alt="Logo"
+                class="w-10 h-10 object-contain"
+              />
+              <span class="font-semibold text-white"
+                >Resto Universitaire Esprit</span
+              >
+            </a>
+            <p class="text-sm text-slate-300">
+              Votre restaurant universitaire moderne propose une expérience
+              culinaire de qualité.
+            </p>
+          </div>
+
+          <div class="flex-1">
+            <h5 class="font-semibold mb-2">Navigation</h5>
+            <ul class="text-sm text-slate-300 space-y-1">
+              <li><a href="#" class="hover:text-white">Accueil</a></li>
+              <li><a href="#" class="hover:text-white">Menus</a></li>
+              <li><a href="#" class="hover:text-white">Réservations</a></li>
+              <li><a href="#" class="hover:text-white">À propos</a></li>
+            </ul>
+          </div>
+
+          <div class="flex-1">
+            <h5 class="font-semibold mb-2">Suivez-nous</h5>
+            <div class="flex space-x-4">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-700 mt-6 pt-4 text-center text-sm text-slate-400"
+        >
+          © <span id="year"></span> Resto Universitaire Esprit — Tous droits
+          réservés
+        </div>
       </div>
+    </footer>
 
-    </div>
-  </footer>
+    <!-- Lucide Icons + mobile menu script -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
 
-  <!-- Lucide Icons + mobile menu script -->
-  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script>
-    lucide.createIcons();
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const btn = document.getElementById("mobile-menu-button");
-    const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
-  </script>
-
-</body>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    </script>
+  </body>
 </html>
