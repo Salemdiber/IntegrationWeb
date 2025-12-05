@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suivi commande - Restaurant Universitaire</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white" style="font-family: 'Inter', sans-serif;">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <a href="HomePageRestoFlow.html" class="flex items-center space-x-3">
+            <img src="/assets/logorestoflow.svg" class="w-12 h-12 md:w-14 md:h-14">
+            <h1 class="text-lg md:text-xl font-bold text-[#C90C0F] leading-none">Resto Universitaire Esprit</h1>
+          </a>
+        </div>
+
+        <!-- Navigation Desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-[#1D1D1B] font-medium">Accueil</a>
+          <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+          <a href="menus.html" class="text-[#1D1D1B] font-medium">Menus</a>
+          <a href="#" class="text-[#C90C0F] font-medium">Suivi commande</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center">
+          <button onclick="location.href='index.html'" class="px-8 py-3 bg-[#C90C0F] text-white font-semibold rounded-xl shadow-lg hover:bg-red-700 transition">
+            <i data-lucide="log-out" class="mr-2"></i> LogOut
+          </button>
+        </div>
+
+        <!-- MOBILE -->
+        <button id="mobile-menu-button" class="md:hidden text-[#1D1D1B] p-2">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="px-4 py-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="index.html" class="text-[#1D1D1B] font-medium">Accueil</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+        <a href="menus.html" class="text-[#1D1D1B] font-medium">Menus</a>
+        <a href="#" class="text-[#C90C0F] font-medium">Suivi commande</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ************ CONTENU PAGE = SUIVI COMMANDE ************ -->
+  <main class="min-h-screen bg-gradient-to-b from-red-100 to-white">
+
+    <div class="max-w-4xl mx-auto px-6 pt-12">
+
+      <!-- Titre -->
+      <h2 class="text-xl font-semibold text-[#C90C0F] flex items-center space-x-2 mb-6">
+        <i data-lucide="utensils" class="w-5 h-5"></i>
+        <span>Suivi Comande</span>
+      </h2>
+
+      <!-- CARD CENTRALE -->
+      <div class="bg-white rounded-xl shadow-xl p-10 text-center border border-slate-200">
+        
+        <i data-lucide="loader" class="w-10 h-10 text-red-600 mx-auto mb-4 animate-spin"></i>
+
+        <h2 class="text-xl font-bold mb-1">EN PRÉPARATION</h2>
+        <p class="text-gray-500">Votre plat est en cours de préparation</p>
+
+        <div class="mt-6 bg-red-50 border border-red-200 rounded-xl py-4">
+          <p class="font-medium text-red-600 flex items-center justify-center">
+            <i data-lucide="clock" class="w-5 h-5 mr-2"></i>
+            Temps estimé restant : 10 min
+          </p>
+        </div>
+      </div>
+
+      <!-- Informations importantes -->
+      <div class="mt-10 bg-white shadow-md rounded-xl border border-gray-300">
+
+        <div class="bg-black text-white px-6 py-3 rounded-t-xl font-semibold flex items-center space-x-2">
+          <i data-lucide="alert-circle" class="w-5 h-5"></i>
+          <span>Informations importantes</span>
+        </div>
+
+        <div class="px-6 py-5">
+          <ul class="space-y-3">
+            <li class="flex items-center text-gray-700">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mr-3"></i>
+              Présentez-vous au comptoir à l’heure indiquée
+            </li>
+            <li class="flex items-center text-gray-700">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mr-3"></i>
+              Votre réservation sera conservée 15 minutes
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1D1D1B] text-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row justify-between gap-6">
+
+        <div class="flex-1">
+          <a class="flex items-center space-x-3 mb-3">
+            <img src="logorestoflow.svg" class="w-10 h-10">
+            <span class="font-semibold">Resto Universitaire Esprit</span>
+          </a>
+          <p class="text-sm text-slate-300">Votre restaurant universitaire moderne offre une expérience culinaire de qualité.</p>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="font-semibold mb-2">Navigation</h5>
+          <ul class="text-sm space-y-1 text-slate-300">
+            <li><a href="index.html" class="hover:text-white">Accueil</a></li>
+            <li><a href="menus.html" class="hover:text-white">Menus</a></li>
+            <li><a href="#" class="hover:text-white">Réservations</a></li>
+            <li><a href="#" class="hover:text-white">Suivi commande</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="font-semibold mb-2">Contact</h5>
+          <p class="text-sm text-slate-300">El Ghazella Esprit</p>
+          <p class="text-sm">01 23 45 67 89</p>
+          <p class="text-sm">contact@resto.tn</p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-slate-400">
+        © <span id="year"></span> Resto Universitaire Esprit — Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
