@@ -84,6 +84,9 @@
 .cursor-pointer {
   cursor: pointer;
 }
+.resize {
+  resize: both;
+}
 .resize-none {
   resize: none;
 }
@@ -209,6 +212,13 @@
 .shadow-\[0_6px_12px_rgba\(14\,20\,30\,0\.06\)\,0_12px_24px_rgba\(14\,20\,30\,0\.04\)\,0_20px_40px_rgba\(14\,20\,30\,0\.02\)\] {
   --tw-shadow: 0 6px 12px var(--tw-shadow-color, rgba(14,20,30,0.06)), 0 12px 24px var(--tw-shadow-color, rgba(14,20,30,0.04)), 0 20px 40px var(--tw-shadow-color, rgba(14,20,30,0.02));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.ring-2 {
+  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.ring-\[\#C90C0F\] {
+  --tw-ring-color: #C90C0F;
 }
 .filter {
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
