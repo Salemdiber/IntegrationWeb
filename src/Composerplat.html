@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composer votre plat - Restaurant Universitaire</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white" style="font-family: 'Inter', sans-serif;">
+
+  <!-- Header Navigation -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <a href="menus.html" class="flex items-center space-x-3" aria-label="Accueil - Resto Universitaire Esprit">
+            <img src="logorestoflow.svg" alt="Logo Resto Universitaire"
+              class="w-12 h-12 md:w-14 md:h-14 object-contain">
+            <h1 class="text-lg md:text-xl font-bold text-[#C90C0F] leading-none">Resto Universitaire Esprit</h1>
+          </a>
+        </div>
+
+        <!-- Navigation Desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Accueil
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Réservations
+          </a>
+          <a href="menus.html" class="text-[#1D1D1B] font-medium flex items-center">
+            Menus
+          </a>
+          <a href="composer-plat.html" class="text-[#C90C0F] font-medium flex items-center">
+            Composer plat
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            À propos
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-[#1D1D1B] hover:text-[#C90C0F] p-2" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button
+            class="px-8 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-red-700 transition-all duration-300 flex items-center cursor-pointer">
+            <i data-lucide="log-out" class="mr-2"></i>
+            LogOut
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (hidden on desktop) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="#" class="text-[#1D1D1B] font-medium">Accueil</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+        <a href="menus.html" class="text-[#1D1D1B] font-medium">Menus</a>
+        <a href="composer-plat.html" class="text-[#C90C0F] font-medium">Composer plat</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">À propos</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+ <div class="bg-white shadow-md rounded-xl p-6 border border-slate-200">
+    <section class="bg-transparent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-left py-8 md:py-12">
+        <h2 class="text-[#C90C0F] text-3xl sm:text-4xl md:text-3xl lg:text-3xl font-extrabold tracking-tight text-left drop-shadow-lg flex items-center space-x-2 mb-6">
+        <i data-lucide="utensils" class="w-5 h-5"></i>
+         <span> Composer votre plat</span>
+        </h2>
+        
+      </div>
+    </section>
+
+    <!-- Step 1: Choose your base -->
+    <section class="py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-8">
+          <h3 class="text-[#1D1D1B] text-2xl md:text-2xl font-bold mb-2">Étape 1 : Choisissez votre Base</h3>
+          <p class="text-gray-600">Sélectionnez la base de votre plat parmi nos spécialités</p>
+        </div>
+
+        <!-- Grid of base options -->
+     <div class="bg-white shadow-md rounded-xl p-6 border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Option 1: Ojja Merguez -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ojja.png" alt="Ojja Merguez" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Ojja Merguez</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 2: Pattes Bolognaise -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ma9rouna.jpeg" alt="Pattes Bolognaise" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Pattes Bolognaise</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 3: Patte (Note: J'ai utilisé la même image, à remplacer par l'image correcte) -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ma9rouna.jpeg" alt="Patte" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Patte</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 4: Couscous -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="cous.webp" alt="Couscous" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Couscous</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+       
+      </div>
+    </section>
+    <section class="py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-8">
+          <h3 class="text-[#1D1D1B] text-2xl md:text-2xl font-bold mb-2">Étape 2 : Choisissez votre Protéine</h3>
+          
+        </div>
+
+        <!-- Grid of base options -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Option 1: Ojja Merguez -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="Fotolia_93091049_M.jpg" alt="Ojja Merguez" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Poulet</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 2: Pattes Bolognaise -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="000000000000000000000vianderouhe.jpg" alt="Pattes Bolognaise" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Viande</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 3: Patte (Note: J'ai utilisé la même image, à remplacer par l'image correcte) -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="Design_sans_titre_T7YYyME.webp" alt="Patte" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Merguez</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+    
+
+    </div>
+
+       
+      </div>
+    </section>
+     <section class="py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-8">
+          <h3 class="text-[#1D1D1B] text-2xl md:text-2xl font-bold mb-2">Étape 3 : Choisissez votre Légumes</h3>
+         
+        </div>
+
+        <!-- Grid of base options -->
+         <!-- CARD PRINCIPALE -->
+      <div class="bg-white shadow-md rounded-xl p-6 border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Option 1: Ojja Merguez -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="on.webp" alt="Ojja Merguez" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Onion</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 2: Pattes Bolognaise -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="po.webp" alt="Pattes Bolognaise" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Pomme de terre</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 3: Patte (Note: J'ai utilisé la même image, à remplacer par l'image correcte) -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ca.jpeg" alt="Patte" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Carotte</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 4: Couscous -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="poi.webp" alt="Couscous" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Pois chiche</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+    
+
+    
+
+       
+      </div>
+    </section>
+      <section class="py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="mb-8">
+          <h3 class="text-[#1D1D1B] text-2xl md:text-2xl font-bold mb-2">Étape 4 : Choisissez votre Sauce</h3>
+         
+        </div>
+
+        <!-- Grid of base options -->
+         <div class="bg-white shadow-md rounded-xl p-6 border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Option 1: Ojja Merguez -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ha.jpg" alt="Ojja Merguez" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Harissa</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 2: Pattes Bolognaise -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ma.jpg" alt="Pattes Bolognaise" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Mayonnaise</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 3: Patte (Note: J'ai utilisé la même image, à remplacer par l'image correcte) -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="to.jpeg" alt="Patte" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Tomate</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Option 4: Couscous -->
+          <article class="bg-white rounded-lg overflow-hidden flex flex-col border border-[#E5E7EB] shadow-lg">
+            <img src="ke.webp" alt="Couscous" class="w-full h-48 sm:h-52 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="text-xl font-semibold text-[#C90C0F] mb-2">Ketchope</h4>
+              <p class="text-gray-600 mb-4 flex-grow">Réservez rapidement un plat du jour ou composez votre plat sur mesure.</p>
+              <div class="mt-auto">
+                <button class="w-full py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+                  Réserver
+                  <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+         </div>
+
+        <!-- Navigation between steps -->
+        <div class="flex justify-between items-center mt-10 pt-6 border-t border-gray-200">
+          <button class="px-6 py-3 border border-[#C90C0F] text-[#C90C0F] text-base font-semibold rounded-md hover:bg-red-50 transition-all duration-300 flex items-center">
+            <i data-lucide="chevron-left" class="mr-2 w-5 h-5"></i>
+            Retour
+          </button>
+          <div class="text-gray-500">
+            Étape <span class="font-bold text-[#C90C0F]">1</span> sur 3
+          </div>
+          <button class="px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300 flex items-center">
+            Suivant
+            <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+     </div>
+  </main>
+  <!-- INFORMATIONS IMPORTANTES -->
+<div class="max-w-3xl mx-auto mt-10">
+
+    <!-- Titre noir -->
+    <div class="bg-gray-900 text-white font-semibold px-4 py-2 rounded-t-xl flex items-center space-x-2">
+        <span>❗</span>
+        <span>Informations importantes</span>
+    </div>
+
+    <!-- Contenu -->
+    <div class="bg-white shadow-lg border rounded-b-xl p-5 space-y-3">
+
+        <div class="flex items-start space-x-3">
+            <span class="text-red-600 text-lg">●</span>
+            <p class="text-gray-700 text-sm">
+                Présentez-vous au comptoir à l’heure indiquée
+            </p>
+        </div>
+
+        <div class="flex items-start space-x-3">
+            <span class="text-red-600 text-lg">●</span>
+            <p class="text-gray-700 text-sm">
+                Votre réservation sera conservée 15 minutes
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="bg-[#1D1D1B] text-slate-100 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
+        <div class="flex-1">
+          <a href="menus.html" class="flex items-center space-x-3 mb-3">
+            <img src="logorestoflow.svg" alt="Logo" class="w-10 h-10 object-contain">
+            <span class="font-semibold text-white">Resto Universitaire Esprit</span>
+          </a>
+          <p class="text-sm text-slate-300">Votre restaurant universitaire moderne offre une
+            expérience culinaire de qualité dans un environnement
+            convivial et accueillant.</p>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Navigation</h5>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li><a href="#" class="hover:text-white">Accueil</a></li>
+            <li><a href="menus.html" class="hover:text-white">Menus</a></li>
+            <li><a href="#" class="hover:text-white">Réservations</a></li>
+            <li><a href="composer-plat.html" class="hover:text-white">Composer plat</a></li>
+            <li><a href="#" class="hover:text-white">À propos</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Suivez-nous</h5>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-slate-400">
+        © <span id="year"></span> Resto Universitaire Esprit — Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide icons (SVG) - CDN + init -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialiser les icônes Lucide
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+      
+      // Mobile menu toggle
+      var mobileBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          var expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', String(!expanded));
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // current year for footer
+      var y = new Date().getFullYear();
+      var el = document.getElementById('year');
+      if (el) el.textContent = y;
+
+      // Sélection des bases
+      const baseButtons = document.querySelectorAll('article button');
+      baseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Retirer la sélection précédente
+          baseButtons.forEach(btn => {
+            btn.closest('article').classList.remove('ring-2', 'ring-[#C90C0F]');
+          });
+          
+          // Ajouter la sélection actuelle
+          this.closest('article').classList.add('ring-2', 'ring-[#C90C0F]');
+          
+          // Changer le texte du bouton
+          const originalText = this.innerHTML;
+          this.innerHTML = '<i data-lucide="check" class="mr-2 w-5 h-5"></i> Base sélectionnée';
+          window.lucide.createIcons();
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

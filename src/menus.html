@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Universitaire - Header</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white" style="font-family: 'Inter', sans-serif;">
+
+  <!-- Header Navigation -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <a href="/" class="flex items-center space-x-3" aria-label="Accueil - Resto Universitaire Esprit">
+            <img src="/logorestoflow.svg" alt="Logo Resto Universitaire"
+              class="w-12 h-12 md:w-14 md:h-14 object-contain">
+            <h1 class="text-lg md:text-xl font-bold text-[#C90C0F] leading-none">Resto Universitaire Esprit</h1>
+          </a>
+        </div>
+
+        <!-- Navigation Desktop -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Accueil
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            Réservations
+          </a>
+          <a href="#" class="text-[#C90C0F] font-medium flex items-center">
+            Menus
+          </a>
+          <a href="#" class="text-[#1D1D1B] font-medium flex items-center">
+            À propos
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden text-[#1D1D1B] hover:text-[#C90C0F] p-2" aria-label="Ouvrir le menu" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button
+            class="px-8 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-red-700 transition-all duration-300 flex items-center cursor-pointer">
+            <i data-lucide="log-out" class="mr-2"></i>
+            LogOut
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (hidden on desktop) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="#" class="text-[#1D1D1B] font-medium">Accueil</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">Réservations</a>
+        <a href="#" class="text-[#C90C0F] font-medium">Menus</a>
+        <a href="#" class="text-[#1D1D1B] font-medium">À propos</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-transparent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-left py-12 md:py-20">
+      <h2 class="text-[#C90C0F] text-3xl sm:text-4xl md:text-3xl lg:text-3xl font-extrabold tracking-tight text-left drop-shadow-lg">Menus</h2>
+    </div>
+  </section>
+  <!-- Cards container: Réservation plat & Composer plat -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Card 1: Réservation plat (image on top) -->
+        <article
+          class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+          <img src="/reserver.jpg" alt="Plat pour réservation" class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-xl font-semibold text-[#C90C0F]">Réservation plat</h3>
+            <p class="mt-2 text-sm text-slate-700">Réservez rapidement un plat du jour ou composez votre plat sur
+              mesure.</p>
+            <div class="mt-4">
+              <a href="reservationPlat.html"
+                class="group inline-flex w-full items-center justify-center px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                Réserver Un plat <i data-lucide="chevron-right"
+                  class="ml-3 w-5 h-5 transform transition-transform duration-200 group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Composer plat (image on top) -->
+        <article
+          class="bg-white rounded-lg overflow-hidden flex flex-col items-stretch transition-transform hover:scale-105 border border-[#E5E7EB] shadow-lg">
+          <img src="/composer.jpg" alt="Plat pour composer" class="w-full h-40 sm:h-44 md:h-48 lg:h-56 object-cover rounded-t-lg">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-xl font-semibold text-[#C90C0F]">Composer plat</h3>
+            <p class="mt-2 text-sm text-slate-700">Composez votre plat sur mesure. À votre goût !</p>
+            <div class="mt-4">
+              <a href="#"
+                class="group inline-flex w-full items-center justify-center px-6 py-3 bg-[#C90C0F] text-white text-base font-semibold rounded-md shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                Composer Mon plat <i data-lucide="chevron-right"
+                  class="ml-3 w-5 h-5 transform transition-transform duration-200 group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- Informations Section -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <h3 class="text-[#C90C0F] text-2xl md:text-3xl font-extrabold text-left">Informations</h3>
+    </div>
+  </section>
+  <!-- Cards container: Horaires & Menus du jour -->
+  <section class="py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <article class="bg-white rounded-lg overflow-hidden border border-[#E5E7EB] shadow-lg">
+          <!-- Bande header -->
+          <div class="bg-[#1D1D1B] p-3 flex items-center">
+            <i data-lucide="clock" class="w-5 h-5 text-white mr-2"></i>
+            <h4 class="text-white text-xl font-semibold mb-0">Horaires</h4>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-6 space-y-4">
+            <!-- Petit déjeuner -->
+            <div class="flex items-center justify-between bg-[#FF8D8F] text-white px-4 py-2 rounded-md">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="sun" class="w-5 h-5"></i>
+                <span>Déjeuner</span>
+              </div>
+              <span class="font-semibold">11h30 - 14h00</span>
+            </div>
+            <!-- Dîner -->
+            <div class="flex items-center justify-between bg-[#FF8D8F] text-white px-4 py-2 rounded-md">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="moon" class="w-5 h-5"></i>
+                <span>Dîner</span>
+              </div>
+              <span class="font-semibold">18h30 - 20h30</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg overflow-hidden border border-[#E5E7EB] shadow-lg">
+          <!-- Bande header -->
+          <div class="bg-[#1D1D1B] p-3 flex items-center rounded-t-lg">
+            <i data-lucide="menu" class="w-5 h-5 text-white mr-2"></i>
+            <h4 class="text-white text-xl font-semibold mb-0">Menus du jour</h4>
+          </div>
+
+          <!-- Contenu avec bandes séparées -->
+          <div class="p-4 flex flex-col space-y-3">
+            <!-- Bande 1 -->
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
+              <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
+              <span class="font-bold text-white">Pattes Bolognaise</span>
+            </div>
+            <!-- Bande 2 -->
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
+              <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
+              <span class="font-bold text-white">Ojja Merguez</span>
+            </div>
+            <!-- Bande 3 -->
+            <div class="flex items-center px-4 py-2 bg-gradient-to-r from-[#C90C0F] to-white rounded-lg">
+              <i data-lucide="utensils-crossed" class="w-4 h-4 text-white mr-2"></i>
+              <span class="font-bold text-white">Couscous</span>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+      // Mobile menu toggle
+      var mobileBtn = document.getElementById('mobile-menu-button');
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          var expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', String(!expanded));
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-[#1D1D1B] text-slate-100 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
+        <div class="flex-1">
+          <a href="/" class="flex items-center space-x-3 mb-3">
+            <img src="/logorestoflow.svg" alt="Logo" class="w-10 h-10 object-contain">
+            <span class="font-semibold text-white">Resto Universitaire Esprit</span>
+          </a>
+          <p class="text-sm text-slate-300">Votre restaurant universitaire moderne offre une
+            expérience culinaire de qualité dans un environnement
+            convivial et accueillant.</p>
+
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Navigation</h5>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li><a href="#" class="hover:text-white">Accueil</a></li>
+            <li><a href="#" class="hover:text-white">Menus</a></li>
+            <li><a href="#" class="hover:text-white">Réservations</a></li>
+            <li><a href="#" class="hover:text-white">À propos</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-1">
+          <h5 class="text-white font-semibold mb-2">Suivez-nous</h5>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-300 hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-slate-400">
+        © <span id="year"></span> Resto Universitaire Esprit — Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide icons (SVG) - CDN + init -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+      // current year for footer
+      var y = new Date().getFullYear();
+      var el = document.getElementById('year');
+      if (el) el.textContent = y;
+    });
+  </script>
+
+
+</body>
+
+</html>
